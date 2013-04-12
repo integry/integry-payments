@@ -26,6 +26,11 @@ class OfflineCreditCard extends CreditCardPayment
 
 	public function isCvvRequired()
 	{
+		if (!$this->getConfigValue('cvv'))
+		{
+			return false;
+		}
+
 		$ccType = $this->getCardType();
 		if (!$ccType)
 		{
@@ -142,7 +147,7 @@ class OfflineCreditCard extends CreditCardPayment
 		}
 
 		if (($this->getExpirationYear() < date('Y')) ||
-			(($this->getExpirationYear() == date('Y')) && ($this->getExpirationMonth() < date('M'))))
+			(($this->getExpirationYear() == date('Y')) && ($this->getExpirationMonth() < date('n'))))
 		{
 			return false;
 		}
