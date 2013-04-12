@@ -111,6 +111,7 @@ class PaypalBase
     public static function setSoapClient($soapClient)
     {
         self::$soapClient = $soapClient;
+        $soapClient->__setLocation('https://api-3t.paypal.com/2.0/');
     }
 
     /**
@@ -435,6 +436,8 @@ final class PayPalRegistrar
         $headerData      = array("Credentials" =>  $Credentials);
         $mustUnderstand  = true;
 
+        //var_dump($headerData);
+
         PayPalBase::setSoapHeader(new SoapHeader($headerNameSpace, $headerName, $headerData, $mustUnderstand));
     }
 }
@@ -565,10 +568,10 @@ class PaypalSoapClient extends SOAPClient
 	{
 		$args = func_get_args();
 		call_user_func_array(array(get_parent_class($this), '__soapCall'), $args);
-		//$this->saveDebug($this->__getLastRequest(), 'XML');
+		$this->saveDebug($this->__getLastRequest(), 'XML');
 		return self::postProcessResponse();
 	}
-	
+
 	private function saveDebug($data, $name='')
 	{
 		$filename = ClassLoader::getRealPath('cache.').'paypal_soap_calls.log';

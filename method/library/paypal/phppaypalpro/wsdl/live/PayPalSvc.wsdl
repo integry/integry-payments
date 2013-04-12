@@ -42,7 +42,7 @@
 							<xs:documentation>
 							Installment Frequency.
 								<br/>
-									<b>Optional</b>     
+									<b>Optional</b>
 								<br/>
 							</xs:documentation>
 						</xs:annotation>
@@ -52,7 +52,7 @@
 							<xs:documentation>
 							Installment Cycles.
 								<br/>
-									<b>Optional</b>     
+									<b>Optional</b>
 								<br/>
 							</xs:documentation>
 						</xs:annotation>
@@ -62,7 +62,7 @@
 							<xs:documentation>
 							Installment Amount.
 								<br/>
-									<b>Optional</b>     
+									<b>Optional</b>
 								<br/>
 							</xs:documentation>
 						</xs:annotation>
@@ -72,21 +72,21 @@
 							<xs:documentation>
 							Installment Amount.
 								<br/>
-									<b>Optional</b>     
+									<b>Optional</b>
 								<br/>
 							</xs:documentation>
 						</xs:annotation>
-					</xs:element>	
+					</xs:element>
 					<xs:element name="TaxAmount" type="xs:string" minOccurs="0" maxOccurs="1">
 						<xs:annotation>
 							<xs:documentation>
 							Installment Amount.
 								<br/>
-									<b>Optional</b>     
+									<b>Optional</b>
 								<br/>
 							</xs:documentation>
 						</xs:annotation>
-					</xs:element>								
+					</xs:element>
 				</xs:sequence>
 			</xs:complexType>
 			<xs:complexType name="OptionSelectionDetailsType">
@@ -107,7 +107,7 @@
 							<xs:documentation>
 								Option Price.
 								<br/>
-								<b>Optional</b>     
+								<b>Optional</b>
 								<br/>
 							</xs:documentation>
 						</xs:annotation>
@@ -123,7 +123,7 @@
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="PaymentPeriod" type="ns:InstallmentDetailsType" minOccurs="0" maxOccurs="10">
-					</xs:element>						
+					</xs:element>
 				</xs:sequence>
 			</xs:complexType>
 			<xs:complexType name="OptionDetailsType">
@@ -922,7 +922,7 @@
 							<xs:element name="StartDate" type="xs:dateTime" minOccurs="0" maxOccurs="1">
 								<annotation>
 									<documentation>
-										The earliest transaction date at which to start the search. No wildcards are allowed. 
+										The earliest transaction date at which to start the search. No wildcards are allowed.
 										<br/><br/>
 										<b>Required</b>
 									</documentation>
@@ -931,7 +931,7 @@
 							<xs:element name="EndDate" type="xs:dateTime" minOccurs="0" maxOccurs="1">
 								<annotation>
 									<documentation>
-										The latest transaction date to be included in the search 
+										The latest transaction date to be included in the search
 										<br/><br/>
 										Optional
 									</documentation>
@@ -971,7 +971,7 @@
 										<b>Required</b>
 										<br/>
 										<br/>
-Character length and limitations: 17 single-byte alphanumeric characters 
+Character length and limitations: 17 single-byte alphanumeric characters
 </documentation>
 								</annotation>
 							</xs:element>
@@ -994,7 +994,7 @@ Character length and limitations: 17 single-byte alphanumeric characters
 							</xs:element>
 							<xs:element name="Amount" type="cc:BasicAmountType" minOccurs="0" maxOccurs="1">
 								<annotation>
-									<documentation>Refund amount. 
+									<documentation>Refund amount.
 <br/>
 										<br/>
 Amount is <b>required</b>  if RefundType is Partial.
@@ -1006,7 +1006,7 @@ NOTE: If RefundType is Full, do not set Amount.
 							</xs:element>
 							<xs:element name="Memo" type="xs:string" minOccurs="0" maxOccurs="1">
 								<annotation>
-									<documentation>Custom memo about the refund. 
+									<documentation>Custom memo about the refund.
 <br/>
 										<br/>
 Optional
@@ -1042,7 +1042,7 @@ Character length and limitations: 255 single-byte alphanumeric characters
 						<sequence>
 							<element name="RefundTransactionID" type="ebl:TransactionId" minOccurs="0" maxOccurs="1" nillable="true">
 								<annotation>
-									<documentation>Unique transaction ID of the refund. 
+									<documentation>Unique transaction ID of the refund.
 <br/>
 										<br/>
 Character length and limitations:17 single-byte characters
@@ -1052,13 +1052,13 @@ Character length and limitations:17 single-byte characters
 
 							<element name="NetRefundAmount" type="cc:BasicAmountType" minOccurs="0" maxOccurs="1">
 								<annotation>
-									<documentation>Amount subtracted from PayPal balance of original recipient of payment to make this refund 
+									<documentation>Amount subtracted from PayPal balance of original recipient of payment to make this refund
 </documentation>
 								</annotation>
 							</element>
 							<element name="FeeRefundAmount" type="cc:BasicAmountType" minOccurs="0" maxOccurs="1">
 								<annotation>
-									<documentation>Transaction fee refunded to original recipient of payment 
+									<documentation>Transaction fee refunded to original recipient of payment
 </documentation>
 								</annotation>
 							</element>
@@ -1165,11 +1165,11 @@ Character length and limitations:17 single-byte characters
 					<xs:extension base="ebl:AbstractRequestType">
 						<xs:sequence>
 							<xs:element name="TransactionID" type="ebl:TransactionId">
-								<annotation><documentation>Unique identifier of a transaction. 
+								<annotation><documentation>Unique identifier of a transaction.
 <br/><br/>
 <b>Required</b>
 <br/><br/>
-The details for some kinds of transactions cannot be retrieved with GetTransactionDetailsRequest. You cannot obtain details of bank transfer withdrawals, for example. 
+The details for some kinds of transactions cannot be retrieved with GetTransactionDetailsRequest. You cannot obtain details of bank transfer withdrawals, for example.
 <br/><br/>
 Character length and limitations: 17 single-byte alphanumeric characters
 </documentation></annotation>
@@ -1235,20 +1235,20 @@ Character length and limitations: 17 single-byte alphanumeric characters
 					<xs:extension base="ebl:AbstractRequestType">
 						<xs:sequence>
 							<xs:element name="StartDate" type="xs:dateTime" minOccurs="1" maxOccurs="1">
-								<annotation><documentation>The earliest transaction date at which to start the search. No wildcards are allowed. 
+								<annotation><documentation>The earliest transaction date at which to start the search. No wildcards are allowed.
 <br/><br/>
 <b>Required</b>
 </documentation>
 </annotation>
 							</xs:element>
 							<xs:element name="EndDate" type="xs:dateTime" minOccurs="0">
-								<annotation><documentation>The latest transaction date to be included in the search 
+								<annotation><documentation>The latest transaction date to be included in the search
 <br/><br/>
 Optional
 </documentation></annotation>
 							</xs:element>
 							<xs:element name="Payer" type="ebl:EmailAddressType" minOccurs="0" maxOccurs="1">
-								<annotation><documentation>Search by the buyer's email address 
+								<annotation><documentation>Search by the buyer's email address
 <br/><br/>
 Optional
 <br/><br/>
@@ -1268,23 +1268,23 @@ Optional
 </documentation></annotation>
 							</xs:element>
 							<xs:element name="TransactionID" type="ebl:TransactionId" minOccurs="0" maxOccurs="1">
-								<annotation><documentation>Search by the transaction ID. 
+								<annotation><documentation>Search by the transaction ID.
 <br/><br/>
 Optional
 <br/><br/>
-The returned results are from the merchant's transaction records. 
+The returned results are from the merchant's transaction records.
 <br/><br/>
 Character length and limitations: 19 single-byte characters maximum
 </documentation></annotation>
 							</xs:element>
 							<xs:element name="ProfileID" type="xs:string" minOccurs="0" maxOccurs="1">
-								<annotation><documentation>Search by Recurring Payment Profile id.  The ProfileID is returned as part of the CreateRecurringPaymentsProfile API response. 
+								<annotation><documentation>Search by Recurring Payment Profile id.  The ProfileID is returned as part of the CreateRecurringPaymentsProfile API response.
 <br/><br/>
 Optional
 </documentation></annotation>
 							</xs:element>
 							<xs:element name="PayerName" type="ebl:PersonNameType" minOccurs="0" maxOccurs="1">
-								<annotation><documentation>Search by the buyer's name 
+								<annotation><documentation>Search by the buyer's name
 <br/><br/>
 Optional
 <br/><br/>
@@ -1307,17 +1307,17 @@ Optional
 To search for purchased items not related to auctions, set the AuctionItemNumber element to the value of the HTML item_number variable set in the shopping cart for the original transaction.</documentation></annotation>
 							</xs:element>
 							<xs:element name="InvoiceID" type="xs:string" minOccurs="0" maxOccurs="1">
-							<annotation><documentation>Search by invoice identification key, as set by you for the original transaction. InvoiceID searches the invoice records for items sold by the merchant, not the items purchased. 
+							<annotation><documentation>Search by invoice identification key, as set by you for the original transaction. InvoiceID searches the invoice records for items sold by the merchant, not the items purchased.
 <br/><br/>
 Optional
 <br/><br/>
-The value for InvoiceID must exactly match an invoice identification number. No wildcards are allowed. 
+The value for InvoiceID must exactly match an invoice identification number. No wildcards are allowed.
 <br/><br/>
 Character length and limitations: 127 single-byte characters maximum</documentation></annotation></xs:element>
 							<xs:element name="CardNumber" type="xs:string" minOccurs="0" maxOccurs="1"/>
 							<xs:element name="TransactionClass" type="ebl:PaymentTransactionClassCodeType" minOccurs="0" maxOccurs="1">
 								<annotation><documentation>
-								Search by classification of transaction. Some kinds of possible classes of transactions are not searchable with TransactionSearchRequest. You cannot search for bank transfer withdrawals, for example. 
+								Search by classification of transaction. Some kinds of possible classes of transactions are not searchable with TransactionSearchRequest. You cannot search for bank transfer withdrawals, for example.
 <br/><br/>
 Optional
 <br/><br/>
@@ -1361,7 +1361,7 @@ ECheck: only transactions involving eCheck
 </documentation></annotation>
 							</xs:element>
 							<xs:element name="Amount" type="cc:BasicAmountType" minOccurs="0" maxOccurs="1">
-								<annotation><documentation>Search by transaction amount 
+								<annotation><documentation>Search by transaction amount
 <br/><br/>
 Optional
 <br/><br/>
@@ -1374,7 +1374,7 @@ Optional
 </documentation></annotation>
 							</xs:element>
 							<xs:element name="Status" type="ebl:PaymentTransactionStatusCodeType" minOccurs="0" maxOccurs="1">
-								<annotation><documentation>Search by transaction status 
+								<annotation><documentation>Search by transaction status
 <br/><br/>
 Optional
 <br/><br/>
@@ -1419,7 +1419,7 @@ Reversed: A payment was reversed due to a chargeback or other type of reversal. 
 						<xs:sequence>
 							<xs:element name="EmailSubject" type="xs:string" minOccurs="0" maxOccurs="1">
 								<annotation>
-									<documentation>Subject line of the email sent to all recipients. This subject is not contained in the input file; you must create it with your application. 
+									<documentation>Subject line of the email sent to all recipients. This subject is not contained in the input file; you must create it with your application.
 <br/>
 										<br/>
 Optional
@@ -1431,7 +1431,7 @@ Character length and limitations: 255 single-byte alphanumeric characters
 							</xs:element>
 							<xs:element name="ReceiverType" type="ebl:ReceiverInfoCodeType" minOccurs="0" maxOccurs="1">
 								<annotation>
-									<documentation>Indicates how you identify the recipients of payments in all MassPayItems: either by EmailAddress (ReceiverEmail in MassPayItem), PhoneNumber (ReceiverPhone in MassPayItem), or by UserID (ReceiverID in MassPayItem). 
+									<documentation>Indicates how you identify the recipients of payments in all MassPayItems: either by EmailAddress (ReceiverEmail in MassPayItem), PhoneNumber (ReceiverPhone in MassPayItem), or by UserID (ReceiverID in MassPayItem).
 <br/>
 										<br/>
 										<b>Required. </b>You must specify one or the other of EmailAddress or UserID.
@@ -1440,7 +1440,7 @@ Character length and limitations: 255 single-byte alphanumeric characters
 							</xs:element>
                                                         <xs:element name="ButtonSource" type="xs:string" minOccurs="0" maxOccurs="1">
 								<annotation>
-									<documentation>Known as BN code, to track the partner referred merchant transactions. 
+									<documentation>Known as BN code, to track the partner referred merchant transactions.
 <br/><br/>
 Optional
 <br/><br/>
@@ -1450,7 +1450,7 @@ Character length and limitations: 32 single-byte alphanumeric characters
 							</xs:element>
 							<xs:element name="MassPayItem" type="ns:MassPayRequestItemType" minOccurs="1" maxOccurs="250">
 								<annotation>
-									<documentation>Details of each payment. A single MassPayRequest can include up to 250 MassPayItems. 
+									<documentation>Details of each payment. A single MassPayRequest can include up to 250 MassPayItems.
 <br/>
 										<br/>
 										<b>Required</b>
@@ -1476,7 +1476,7 @@ Character length and limitations: 32 single-byte alphanumeric characters
 				<xs:sequence>
 					<xs:element name="ReceiverEmail" type="ebl:EmailAddressType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>Email address of recipient. 
+							<documentation>Email address of recipient.
 <br/>
 								<br/>
 								<b>Required</b>
@@ -1491,7 +1491,7 @@ Character length and limitations: 127 single-byte characters maximum.
 					</xs:element>
 					<xs:element name="ReceiverPhone" type="xs:string" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>Phone number of recipient. 
+							<documentation>Phone number of recipient.
 <br/>
 								<br/>
 								<b>Required</b>
@@ -1505,7 +1505,7 @@ You must specify ReceiverEmail, ReceiverPhone, or ReceiverID, but all MassPayIte
 					</xs:element>
 					<xs:element name="ReceiverID" type="ebl:UserIDType" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>Unique PayPal customer account number. This value corresponds to the value of PayerID returned by GetTransactionDetails. 
+							<documentation>Unique PayPal customer account number. This value corresponds to the value of PayerID returned by GetTransactionDetails.
 <br/>
 								<br/>
 								<b>Required</b>
@@ -1520,7 +1520,7 @@ Character length and limitations: 17 single-byte characters maximum.
 					</xs:element>
 					<xs:element name="Amount" type="cc:BasicAmountType" minOccurs="1" maxOccurs="1">
 						<annotation>
-							<documentation>Payment amount. You must set the currencyID attribute to one of the three-character currency codes for any of the supported PayPal currencies. 
+							<documentation>Payment amount. You must set the currencyID attribute to one of the three-character currency codes for any of the supported PayPal currencies.
 <br/>
 								<br/>
 								<b>Required</b>
@@ -1532,7 +1532,7 @@ You cannot mix currencies in a single MassPayRequest. A single request must incl
 					</xs:element>
 					<xs:element name="UniqueId" type="xs:string" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>Transaction-specific identification number for tracking in an accounting system. 
+							<documentation>Transaction-specific identification number for tracking in an accounting system.
 <br/>
 								<br/>
 Optional
@@ -1544,7 +1544,7 @@ Character length and limitations: 30 single-byte characters. No whitespace allow
 					</xs:element>
 					<xs:element name="Note" type="xs:string" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>Custom note for each recipient. 
+							<documentation>Custom note for each recipient.
 <br/>
 								<br/>
 Optional
@@ -1621,7 +1621,7 @@ Character length and limitations: 4,000 single-byte alphanumeric characters
 						<xs:sequence>
 							<xs:element name="Email" type="ebl:EmailAddressType" minOccurs="1" maxOccurs="1">
 								<annotation>
-									<documentation>Email address of buyer to be verified. 
+									<documentation>Email address of buyer to be verified.
 <br/>
 										<br/>
 										<b>Required</b>
@@ -1634,7 +1634,7 @@ Maximum string length: 255 single-byte characters Input mask: ?@?.??
 							</xs:element>
 							<xs:element name="Street" type="xs:string" minOccurs="1" maxOccurs="1">
 								<annotation>
-									<documentation>First line of buyer’s billing or shipping street address to be verified. 
+									<documentation>First line of buyer’s billing or shipping street address to be verified.
 <br/>
 										<br/>
 										<b>Required</b>
@@ -1648,7 +1648,7 @@ Maximum string length: 35 single-byte characters Alphanumeric plus - , . ‘ # \
 							</xs:element>
 							<xs:element name="Zip" type="xs:string" minOccurs="1" maxOccurs="1">
 								<annotation>
-									<documentation>Postal code to be verified. 
+									<documentation>Postal code to be verified.
 <br/>
 										<br/>
 										<b>Required</b>
@@ -1695,20 +1695,20 @@ Unconfirmed: PayPal responds that the postal address is unconfirmed</documentati
 Matched: The street address matches the street address on file at PayPal.
 	<br/>
 										<br/>
-Unmatched: The street address does not match the street address on file at PayPal. 
+Unmatched: The street address does not match the street address on file at PayPal.
 </documentation>
 								</annotation>
 							</xs:element>
 							<xs:element name="ZipMatch" type="ebl:MatchStatusCodeType" minOccurs="0" maxOccurs="1">
 								<annotation>
-									<documentation>PayPal has compared the zip code you want to verify with the zip code on file for the email address. 
+									<documentation>PayPal has compared the zip code you want to verify with the zip code on file for the email address.
 								<br/>
 										<br/>
 								None: The street address was unmatched. No further comparison of other input values has been made.
 																<br/>
 										<br/>Matched: The zip code matches the zip code on file at PayPal.
 																								<br/>
-										<br/>Unmatched: The zip code does not match the zip code on file at PayPal. 
+										<br/>Unmatched: The zip code does not match the zip code on file at PayPal.
 </documentation>
 								</annotation>
 							</xs:element>
@@ -1719,7 +1719,7 @@ Unmatched: The street address does not match the street address on file at PayPa
 							</xs:element>
 							<xs:element name="PayPalToken" type="xs:string" minOccurs="0" maxOccurs="1">
 								<annotation>
-									<documentation>The token prevents a buyer from using any street address other than the address on file at PayPal during additional purchases he might make from the merchant. It contains encrypted information about the user’s street address and email address. You can pass the value of the token with the Buy Now button HTML address_api_token variable so that PayPal prevents the buyer from using any street address or email address other than those verified by PayPal. The token is valid for 24 hours. 
+									<documentation>The token prevents a buyer from using any street address other than the address on file at PayPal during additional purchases he might make from the merchant. It contains encrypted information about the user’s street address and email address. You can pass the value of the token with the Buy Now button HTML address_api_token variable so that PayPal prevents the buyer from using any street address or email address other than those verified by PayPal. The token is valid for 24 hours.
 								<br/>
 Character length and limitations: 94 single-byte characters
 								</documentation>
@@ -1754,7 +1754,7 @@ Character length and limitations: 94 single-byte characters
 							<xs:element name="Token" type="ebl:ExpressCheckoutTokenType" minOccurs="1" maxOccurs="1">
 								<annotation>
 								<documentation>
-								A unique token that identifies this boarding session. 
+								A unique token that identifies this boarding session.
 Use this token with the GetBoarding Details API call.
 <br/><br/>
 Character length and limitations: 64 alphanumeric characters. The token has the following format:
@@ -1781,7 +1781,7 @@ OB-61characterstring</documentation></annotation>
 							<xs:element name="Token" type="ebl:ExpressCheckoutTokenType" minOccurs="1" maxOccurs="1">
 								<annotation>
 								<documentation>
-								A unique token returned by the EnterBoarding API call that identifies this boarding session. 
+								A unique token returned by the EnterBoarding API call that identifies this boarding session.
 <br/><br/>
 <b>Required</b>
 <br/><br/>
@@ -1848,7 +1848,7 @@ Character length and limitations: 20 single-byte characters
 					<xs:extension base="ebl:AbstractRequestType">
 						<xs:sequence>
 							<xs:element name="Token" type="ebl:AuthFlowTokenType" minOccurs="1" maxOccurs="1">
-								<annotation><documentation>A timestamped token, the value of which was returned by SetAuthFlowParam Response. 
+								<annotation><documentation>A timestamped token, the value of which was returned by SetAuthFlowParam Response.
 <br/><br/>
 <b>Required</b>
 <br/><br/>
@@ -1943,8 +1943,8 @@ Character length and limitations: 20 single-byte characters
 						</xs:sequence>
 					</xs:extension>
 				</xs:complexContent>
-			</xs:complexType>                        
-                      
+			</xs:complexType>
+
 			<xs:element name="GetAccessPermissionDetailsRequest" type="ns:GetAccessPermissionDetailsRequestType"/>
 			<xs:element name="GetAccessPermissionDetailsResponse" type="ns:GetAccessPermissionDetailsResponseType"/>
 			<xs:element name="GetAccessPermissionDetailsReq">
@@ -1959,7 +1959,7 @@ Character length and limitations: 20 single-byte characters
 					<xs:extension base="ebl:AbstractRequestType">
 						<xs:sequence>
 							<xs:element name="Token" type="ebl:AuthFlowTokenType" minOccurs="1" maxOccurs="1">
-								<annotation><documentation>A timestamped token, the value of which was returned by SetAuthFlowParam Response. 
+								<annotation><documentation>A timestamped token, the value of which was returned by SetAuthFlowParam Response.
 									<br/><br/>
 									<b>Required</b>
 									<br/><br/>
@@ -1979,7 +1979,7 @@ Character length and limitations: 20 single-byte characters
 					</xs:extension>
 				</xs:complexContent>
 			</xs:complexType>
-                        
+
 			<xs:element name="GetIncentiveEvaluationRequest" type="ns:GetIncentiveEvaluationRequestType"/>
 			<xs:element name="GetIncentiveEvaluationResponse" type="ns:GetIncentiveEvaluationResponseType"/>
 			<xs:element name="GetIncentiveEvaluationReq">
@@ -2031,7 +2031,7 @@ Character length and limitations: 20 single-byte characters
 					<xs:extension base="ebl:AbstractResponseType">
 						<xs:sequence>
 							<xs:element name="Token" type="ebl:ExpressCheckoutTokenType" minOccurs="1" maxOccurs="1">
-								<annotation><documentation>A timestamped token by which you identify to PayPal that you are processing this payment with Express Checkout. The token expires after three hours. If you set Token in the SetExpressCheckoutRequest, the value of Token in the response is identical to the value in the request. 
+								<annotation><documentation>A timestamped token by which you identify to PayPal that you are processing this payment with Express Checkout. The token expires after three hours. If you set Token in the SetExpressCheckoutRequest, the value of Token in the response is identical to the value in the request.
 								<br/><br/>
 Character length and limitations: 20 single-byte characters
 </documentation></annotation>
@@ -2054,7 +2054,7 @@ Character length and limitations: 20 single-byte characters
 					<xs:extension base="ebl:AbstractRequestType">
 						<xs:sequence>
 							<xs:element name="Token" type="ebl:ExpressCheckoutTokenType" minOccurs="1" maxOccurs="1">
-								<annotation><documentation>A timestamped token, the value of which was returned by SetExpressCheckoutResponse. 
+								<annotation><documentation>A timestamped token, the value of which was returned by SetExpressCheckoutResponse.
 <br/><br/>
 <b>Required</b>
 <br/><br/>
@@ -2198,24 +2198,24 @@ Character length and limitations: 20 single-byte characters
 					<documentation>
 					Address Verification System response code. Character limit: One single-byte alphanumeric character
 				<table>
-				<tr><th>AVS Code</th><th>Meaning</th><th>Matched Details</th></tr> 
-<tr><td>A </td><td>Address</td><td>Address only (no ZIP) </td></tr> 
-<tr><td>B </td><td>International “A”</td><td>Address only (no ZIP)</td></tr>  
-<tr><td>C</td><td>International “N”</td><td> None </td></tr> 
-<tr><td>D</td><td>International “X” </td><td>Address and Postal Code</td></tr>  
-<tr><td>E </td><td>Not allowed for MOTO (Internet/Phone) transactions </td><td>Not applicable</td></tr> 
-<tr><td>F </td><td>UK-specific “X”</td><td>Address and Postal Code </td></tr> 
+				<tr><th>AVS Code</th><th>Meaning</th><th>Matched Details</th></tr>
+<tr><td>A </td><td>Address</td><td>Address only (no ZIP) </td></tr>
+<tr><td>B </td><td>International “A”</td><td>Address only (no ZIP)</td></tr>
+<tr><td>C</td><td>International “N”</td><td> None </td></tr>
+<tr><td>D</td><td>International “X” </td><td>Address and Postal Code</td></tr>
+<tr><td>E </td><td>Not allowed for MOTO (Internet/Phone) transactions </td><td>Not applicable</td></tr>
+<tr><td>F </td><td>UK-specific “X”</td><td>Address and Postal Code </td></tr>
 <tr><td>G </td><td>Global Unavailable</td><td> Not applicable </td></tr>
-<tr><td>I </td><td>International Unavailable</td><td>Not applicable </td></tr> 
-<tr><td>N </td><td>No</td><td>None</td></tr>  
-<tr><td>P</td><td>Postal (International “Z”)</td><td>Postal Code only (no Address) </td></tr>  
-<tr><td>R</td><td>Retry</td><td>Not applicable</td></tr>   
+<tr><td>I </td><td>International Unavailable</td><td>Not applicable </td></tr>
+<tr><td>N </td><td>No</td><td>None</td></tr>
+<tr><td>P</td><td>Postal (International “Z”)</td><td>Postal Code only (no Address) </td></tr>
+<tr><td>R</td><td>Retry</td><td>Not applicable</td></tr>
 <tr><td>S </td><td>Service not Supported </td><td>Not applicable </td></tr>
-<tr><td>U </td><td>Unavailable</td><td>Not applicable </td></tr> 
-<tr><td>W </td><td>Whole ZIP</td><td>Nine-digit ZIP code (no Address) </td></tr> 
-<tr><td>X </td><td>Exact match </td><td>Address and nine-digit ZIP code</td></tr> 
-<tr><td>Y </td><td>Yes</td><td>Address and five-digit ZIP</td></tr>  
-<tr><td>Z </td><td>ZIP</td><td> Five-digit ZIP code (no Address)</td></tr> 
+<tr><td>U </td><td>Unavailable</td><td>Not applicable </td></tr>
+<tr><td>W </td><td>Whole ZIP</td><td>Nine-digit ZIP code (no Address) </td></tr>
+<tr><td>X </td><td>Exact match </td><td>Address and nine-digit ZIP code</td></tr>
+<tr><td>Y </td><td>Yes</td><td>Address and five-digit ZIP</td></tr>
+<tr><td>Z </td><td>ZIP</td><td> Five-digit ZIP code (no Address)</td></tr>
 <tr><td>All others </td><td>Error Not applicable</td><td></td></tr>
 </table>
 </documentation></annotation>
@@ -2225,14 +2225,14 @@ Character length and limitations: 20 single-byte characters
 								<documentation>
 								Result of the CVV2 check by PayPal.
 								<table>
-								<tr><th>CVV2 Code</th><th>Meaning</th><th>Matched Details</th></tr>   
-<tr><td>M </td><td>Match</td><td>CVV2 </td></tr> 
-<tr><td>N </td><td>No match </td><td>None</td></tr> 
-<tr><td>P </td><td>Not Processed</td><td>Not applicable</td></tr>  
-<tr><td>S</td><td>Service not Supported</td><td>Not applicable</td></tr>   
-<tr><td>U </td><td>Unavailable</td><td>Not applicable</td></tr>  
-<tr><td>X</td><td>No response</td><td>  Not applicable</td></tr> 
-<tr><td>All others </td><td>Error</td><td>Not applicable </td></tr> 
+								<tr><th>CVV2 Code</th><th>Meaning</th><th>Matched Details</th></tr>
+<tr><td>M </td><td>Match</td><td>CVV2 </td></tr>
+<tr><td>N </td><td>No match </td><td>None</td></tr>
+<tr><td>P </td><td>Not Processed</td><td>Not applicable</td></tr>
+<tr><td>S</td><td>Service not Supported</td><td>Not applicable</td></tr>
+<tr><td>U </td><td>Unavailable</td><td>Not applicable</td></tr>
+<tr><td>X</td><td>No response</td><td>  Not applicable</td></tr>
+<tr><td>All others </td><td>Error</td><td>Not applicable </td></tr>
 </table>
 </documentation></annotation>
 							</xs:element>
@@ -2277,7 +2277,7 @@ Character length and limitations: 20 single-byte characters
 						<xs:sequence>
 							<xs:element name="AuthorizationID" type="ebl:AuthorizationId" minOccurs="1" maxOccurs="1">
 								<annotation>
-									<documentation>The authorization identification number of the payment you want to capture. 
+									<documentation>The authorization identification number of the payment you want to capture.
 <br/>
 										<br/>
 										<b>Required</b>
@@ -2289,7 +2289,7 @@ Character length and limits: 19 single-byte characters maximum
 							</xs:element>
 							<xs:element name="Amount" type="cc:BasicAmountType" minOccurs="1" maxOccurs="1">
 								<annotation>
-									<documentation>Amount to authorize. You must set the currencyID attribute to USD. 
+									<documentation>Amount to authorize. You must set the currencyID attribute to USD.
 <br/>
 										<br/>
 										<b>Required</b>
@@ -2301,7 +2301,7 @@ Limitations: Must not exceed $10,000 USD in any currency. No currency symbol. De
 							</xs:element>
 							<xs:element name="CompleteType" type="ebl:CompleteCodeType" minOccurs="1" maxOccurs="1">
 								<annotation>
-									<documentation>Indicates if this capture is the last capture you intend to make. The default is Complete. If CompleteType is Complete, any remaining amount of the original reauthorized transaction is automatically voided. 
+									<documentation>Indicates if this capture is the last capture you intend to make. The default is Complete. If CompleteType is Complete, any remaining amount of the original reauthorized transaction is automatically voided.
 <br/>
 										<br/>
 										<b>Required</b>
@@ -2313,7 +2313,7 @@ Character length and limits: 12 single-byte alphanumeric characters
 							</xs:element>
 							<xs:element name="Note" type="xs:string" minOccurs="0" maxOccurs="1">
 								<annotation>
-									<documentation>An informational note about this settlement that is displayed to the payer in email and in  transaction history. 
+									<documentation>An informational note about this settlement that is displayed to the payer in email and in  transaction history.
 <br/>
 										<br/>
 Optional
@@ -2325,7 +2325,7 @@ Character length and limits: 255 single-byte characters
 							</xs:element>
 							<xs:element name="InvoiceID" type="xs:string" minOccurs="0" maxOccurs="1">
 								<annotation>
-									<documentation>Your invoice number or other identification number. 
+									<documentation>Your invoice number or other identification number.
 <br/>
 										<br/>
 The InvoiceID value is recorded only if the authorization you are capturing is an order authorization, not a basic authorization.
@@ -2391,7 +2391,7 @@ Character length and limits: &lt;18 characters alphanumeric characters
 						<xs:sequence>
 							<xs:element name="AuthorizationID" type="xs:string" minOccurs="1" maxOccurs="1">
 								<annotation>
-									<documentation>The value of a previously authorized transaction identification number returned by a PayPal product. You can obtain a buyer's transaction number from the TransactionID element of the PayerInfo structure returned by GetTransactionDetailsResponse. 
+									<documentation>The value of a previously authorized transaction identification number returned by a PayPal product. You can obtain a buyer's transaction number from the TransactionID element of the PayerInfo structure returned by GetTransactionDetailsResponse.
 <br/>
 										<br/>
 										<b>Required</b>
@@ -2403,7 +2403,7 @@ Character length and limits: 19 single-byte characters maximum
 							</xs:element>
 							<xs:element name="Amount" type="cc:BasicAmountType" minOccurs="1" maxOccurs="1">
 								<annotation>
-									<documentation>Amount to reauthorize. 
+									<documentation>Amount to reauthorize.
 <br/>
 										<br/>
 										<b>Required</b>
@@ -2425,7 +2425,7 @@ Limitations: Must not exceed $10,000 USD in any currency. No currency symbol. De
 								<annotation>
 									<documentation>A new authorization identification number.
 								<br/>
-										<br/>Character length and limits: 19 single-byte characters 
+										<br/>Character length and limits: 19 single-byte characters
 </documentation>
 								</annotation>
 							</xs:element>
@@ -2449,7 +2449,7 @@ Limitations: Must not exceed $10,000 USD in any currency. No currency symbol. De
 						<xs:sequence>
 							<xs:element name="AuthorizationID" type="xs:string" minOccurs="1" maxOccurs="1">
 								<annotation>
-									<documentation>The value of the original authorization identification number returned by a PayPal product. 
+									<documentation>The value of the original authorization identification number returned by a PayPal product.
 <br/>
 										<br/>
 If you are voiding a transaction that has been reauthorized, use the ID from the original authorization, and not the reauthorization.
@@ -2464,7 +2464,7 @@ Character length and limits: 19 single-byte characters
 							</xs:element>
 							<xs:element name="Note" type="xs:string" minOccurs="0" maxOccurs="1">
 								<annotation>
-									<documentation>An informational note about this settlement that is displayed to the payer in email and in  transaction history. 
+									<documentation>An informational note about this settlement that is displayed to the payer in email and in  transaction history.
 <br/>
 										<br/>
 Optional
@@ -2484,7 +2484,7 @@ Character length and limits: 255 single-byte characters
 						<xs:sequence>
 							<xs:element name="AuthorizationID" type="xs:string" minOccurs="1" maxOccurs="1">
 								<annotation>
-									<documentation>The authorization identification number you specified in the request. 
+									<documentation>The authorization identification number you specified in the request.
 <br/>
 										<br/>
 Character length and limits: 19 single-byte characters
@@ -2510,7 +2510,7 @@ Character length and limits: 19 single-byte characters
 						<xs:sequence>
 							<xs:element name="TransactionID" type="xs:string" minOccurs="1" maxOccurs="1">
 								<annotation>
-									<documentation>The value of the order’s transaction identification number returned by a PayPal product. 
+									<documentation>The value of the order’s transaction identification number returned by a PayPal product.
 <br/>
 										<br/>
 										<b>Required</b>
@@ -2521,7 +2521,7 @@ Character length and limits: 19 single-byte characters
 							</xs:element>
 							<xs:element name="TransactionEntity" type="ebl:TransactionEntityType" minOccurs="0" maxOccurs="1">
 								<annotation>
-									<documentation>Type of transaction to authorize. The only allowable value is <b>Order</b>, which means that the transaction represents a customer order that can be fulfilled over 29 days. 
+									<documentation>Type of transaction to authorize. The only allowable value is <b>Order</b>, which means that the transaction represents a customer order that can be fulfilled over 29 days.
 <br/>
 										<br/>
 Optional
@@ -2530,7 +2530,7 @@ Optional
 							</xs:element>
 							<xs:element name="Amount" type="cc:BasicAmountType" minOccurs="1" maxOccurs="1">
 								<annotation>
-									<documentation>Amount to authorize. 
+									<documentation>Amount to authorize.
 <br/>
 										<br/>
 										<b>Required</b>
@@ -2550,7 +2550,7 @@ Limitations: Must not exceed $10,000 USD in any currency. No currency symbol. De
 						<xs:sequence>
 							<xs:element name="TransactionID" type="xs:string" minOccurs="1" maxOccurs="1">
 								<annotation>
-									<documentation>An authorization identification number. 
+									<documentation>An authorization identification number.
 								<br/>
 										<br/>
 Character length and limits: 19 single-byte characters
@@ -2559,7 +2559,7 @@ Character length and limits: 19 single-byte characters
 							</xs:element>
 							<xs:element name="Amount" type="cc:BasicAmountType" minOccurs="1" maxOccurs="1">
 								<annotation>
-									<documentation>The amount and currency you specified in the request. 
+									<documentation>The amount and currency you specified in the request.
 </documentation>
 								</annotation>
 							</xs:element>
@@ -2593,7 +2593,7 @@ Character length and limits: 19 single-byte characters
 							</xs:element>
 							<xs:element name="TransactionEntity" type="ebl:TransactionEntityType" minOccurs="0" maxOccurs="1">
 								<annotation>
-									<documentation>Type of transaction to authorize. The only allowable value is <b>Order</b>, which means that the transaction represents a customer order that can be fulfilled over 29 days. 
+									<documentation>Type of transaction to authorize. The only allowable value is <b>Order</b>, which means that the transaction represents a customer order that can be fulfilled over 29 days.
 <br/>
 										<br/>
 Optional
@@ -2602,7 +2602,7 @@ Optional
 							</xs:element>
 							<xs:element name="Amount" type="cc:BasicAmountType" minOccurs="1" maxOccurs="1">
 								<annotation>
-									<documentation>Amount to authorize. 
+									<documentation>Amount to authorize.
 <br/>
 										<br/>
 										<b>Required</b>
@@ -2757,7 +2757,7 @@ Character length and limitations: 20 single-byte characters
 					<xs:extension base="ebl:AbstractRequestType">
 						<xs:sequence>
 							<xs:element name="Token" type="xs:string" minOccurs="1" maxOccurs="1">
-								<annotation><documentation>A timestamped token, the value of which was returned by SetMobileCheckoutResponse. 
+								<annotation><documentation>A timestamped token, the value of which was returned by SetMobileCheckoutResponse.
 <br/><br/>
 <b>Required</b>
 <br/><br/>
@@ -2788,7 +2788,7 @@ Character length and limitations: 20 single-byte characters
                         </xs:element>
                         <xs:complexType name="GetBalanceRequestType">
                                 <xs:complexContent>
-                                     <xs:extension base="ebl:AbstractRequestType">                                        
+                                     <xs:extension base="ebl:AbstractRequestType">
                                          <xs:sequence>
                                                 <xs:element name="ReturnAllCurrencies" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         </xs:sequence>
@@ -2943,7 +2943,7 @@ Character length and limitations: 20 single-byte characters
 					</xs:extension>
 				</xs:complexContent>
 			</xs:complexType>
-			
+
 			<xs:element name="DoNonReferencedCreditRequest" type="ns:DoNonReferencedCreditRequestType"/>
 			<xs:element name="DoNonReferencedCreditResponse" type="ns:DoNonReferencedCreditResponseType"/>
 			<xs:element name="DoNonReferencedCreditReq">
@@ -2971,7 +2971,7 @@ Character length and limitations: 20 single-byte characters
 					</xs:extension>
 				</xs:complexContent>
 			</xs:complexType>
-			
+
 
 			<xs:element name="CreateRecurringPaymentsProfileRequest" type="ns:CreateRecurringPaymentsProfileRequestType"/>
 			<xs:element name="CreateRecurringPaymentsProfileResponse" type="ns:CreateRecurringPaymentsProfileResponseType"/>
@@ -3130,7 +3130,7 @@ Character length and limitations: 20 single-byte characters
 			</xs:element>
 			<xs:complexType name="GetPalDetailsRequestType">
 				<xs:complexContent>
-					<xs:extension base="ebl:AbstractRequestType">                              
+					<xs:extension base="ebl:AbstractRequestType">
 						<xs:sequence>
 						</xs:sequence>
 					</xs:extension>
@@ -3325,21 +3325,21 @@ Character length and limitations: 20 single-byte characters
 	<wsdl:message name="SetAccessPermissionsResponse">
 		<wsdl:part name="SetAccessPermissionsResponse" element="ns:SetAccessPermissionsResponse"/>
 	</wsdl:message>
-        
+
 	<wsdl:message name="UpdateAccessPermissionsRequest">
 		<wsdl:part name="UpdateAccessPermissionsRequest" element="ns:UpdateAccessPermissionsReq"/>
 	</wsdl:message>
 	<wsdl:message name="UpdateAccessPermissionsResponse">
 		<wsdl:part name="UpdateAccessPermissionsResponse" element="ns:UpdateAccessPermissionsResponse"/>
 	</wsdl:message>
-        
+
 	<wsdl:message name="GetAccessPermissionDetailsRequest">
 		<wsdl:part name="GetAccessPermissionDetailsRequest" element="ns:GetAccessPermissionDetailsReq"/>
 	</wsdl:message>
 	<wsdl:message name="GetAccessPermissionDetailsResponse">
 		<wsdl:part name="GetAccessPermissionDetailsResponse" element="ns:GetAccessPermissionDetailsResponse"/>
 	</wsdl:message>
-        
+
 	<wsdl:message name="GetIncentiveEvaluationRequest">
 		<wsdl:part name="GetIncentiveEvaluationRequest" element="ns:GetIncentiveEvaluationReq"/>
 	</wsdl:message>
@@ -3633,13 +3633,13 @@ Character length and limitations: 20 single-byte characters
 		<wsdl:operation name="UpdateAccessPermissions">
 			<wsdl:input message="ns:UpdateAccessPermissionsRequest"/>
 			<wsdl:output message="ns:UpdateAccessPermissionsResponse"/>
-		</wsdl:operation> 
+		</wsdl:operation>
 
 		<wsdl:operation name="GetAccessPermissionDetails">
 			<wsdl:input message="ns:GetAccessPermissionDetailsRequest"/>
 			<wsdl:output message="ns:GetAccessPermissionDetailsResponse"/>
-		</wsdl:operation>                               
-                
+		</wsdl:operation>
+
 		<wsdl:operation name="GetIncentiveEvaluation">
 			<wsdl:input message="ns:GetIncentiveEvaluationRequest"/>
 			<wsdl:output message="ns:GetIncentiveEvaluationResponse"/>
@@ -4061,7 +4061,7 @@ Character length and limitations: 20 single-byte characters
 				<wsdlsoap:body use="literal"/>
 			</wsdl:output>
 		</wsdl:operation>
-                
+
 		<wsdl:operation name="UpdateAccessPermissions">
 			<wsdlsoap:operation soapAction=""/>
 			<wsdl:input>
@@ -4073,7 +4073,7 @@ Character length and limitations: 20 single-byte characters
 				<wsdlsoap:body use="literal"/>
 			</wsdl:output>
 		</wsdl:operation>
-                
+
 		<wsdl:operation name="GetAccessPermissionDetails">
 			<wsdlsoap:operation soapAction=""/>
 			<wsdl:input>
@@ -4085,7 +4085,7 @@ Character length and limitations: 20 single-byte characters
 				<wsdlsoap:body use="literal"/>
 			</wsdl:output>
 		</wsdl:operation>
-                
+
 		<wsdl:operation name="GetIncentiveEvaluation">
 			<wsdlsoap:operation soapAction=""/>
 			<wsdl:input>
@@ -4320,10 +4320,10 @@ Character length and limitations: 20 single-byte characters
 	</wsdl:binding>
 	<wsdl:service name="PayPalAPIInterfaceService">
 		<wsdl:port name="PayPalAPI" binding="ns:PayPalAPISoapBinding">
-			<wsdlsoap:address location="https://api.sandbox.paypal.com/2.0/"/>
+			<wsdlsoap:address location="https://api-3t.paypal.com/2.0/"/>
 		</wsdl:port>
 		<wsdl:port name="PayPalAPIAA" binding="ns:PayPalAPIAASoapBinding">
-			<wsdlsoap:address location="https://api-aa.sandbox.paypal.com/2.0/"/>
+			<wsdlsoap:address location="https://api-aa.paypal.com/2.0/"/>
 		</wsdl:port>
 	</wsdl:service>
 </wsdl:definitions>
